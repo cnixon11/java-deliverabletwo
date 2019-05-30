@@ -8,16 +8,37 @@ public class Grandcircus {
 
 		Scanner scanner = new Scanner(System.in);
 
-		String string1 = "Chris";
-		String string2 = "Nixon";
+		System.out.println("Enter First word"); // Prompt User
+		String firstWord = scanner.nextLine(); // Read user input
+		System.out.println("Enter Second word");
+		String secondWord = scanner.nextLine();
 
-		System.out.print("The sum of " + string1 + " is: ");
-		System.out.println((int) 'C' + 'h' + 'r' + 'i' + 's');
-		System.out.print("The sum of " + string2 + " is: ");
-		System.out.println((int) 'N' + 'i' + 'x' + 'o' + 'n');
+// Convert the string into a char array to enable you to loop through it and print out unicode
+		for (char ch : firstWord.toCharArray()) {
+			System.out.println(ch + ": " + (int) (ch));
+		}
 
-		System.out.print("The difference of the absolute value of " + string1 + " " + string2 + " is: ");
-		System.out.println((int) ('N' + 'i' + 'x' + 'o' + 'n') - ('C' + 'h' + 'r' + 'i' + 's'));
+		for (char ch : secondWord.toCharArray()) {
+			System.out.println(ch + ": " + (int) (ch));
+		}
+
+		// iterate through and sum each character
+		int sum1 = 0;
+		for (char ch : firstWord.toCharArray()) {
+			sum1 += ((int) (ch));
+		}
+		System.out.println(sum1);
+
+		int sum2 = 0;
+		for (char ch : secondWord.toCharArray()) {
+			sum2 += ((int) (ch));
+		}
+		System.out.println(sum2);
+
+		System.out.println(sum1 - sum2);
+
+		System.out.println("The first word is " + firstWord + " and the second word is " + secondWord); // Output user
+																										// input
 
 	}
 }
