@@ -27,18 +27,19 @@ public class Grandcircus {
 		for (char ch : firstWord.toCharArray()) {
 			sum1 += ((int) (ch));
 		}
-		System.out.println(sum1);
+
+		System.out.println("The first word is " + firstWord + " and the second word is " + secondWord); // Output user
+		// input
+
+		System.out.println("The sum of the first word is " + sum1);
 
 		int sum2 = 0;
 		for (char ch : secondWord.toCharArray()) {
 			sum2 += ((int) (ch));
 		}
-		System.out.println(sum2);
+		System.out.println("The sum of the second word is " + sum2);
 
-		System.out.println(sum1 - sum2);
-
-		System.out.println("The first word is " + firstWord + " and the second word is " + secondWord); // Output user
-																										// input
+		System.out.println("The difference between the two words is " + (sum2 - sum1));
 
 	}
 }
